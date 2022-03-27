@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Visiting Card QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div id="logbox">
+        <h1 align="center">QR Code Generated</h1>
+        <p align="center">
+            <img src="{{url_for('static', filename='QRCode.png')}}" alt="QR Code">
+            <a href="static/QRCode.png" download="QRCode.png">Download QR Code</a>
+        </p>
+        <form id="backtohome" action = "http://localhost:5000/" method = "post">
+            <input class="inputButton" type="submit" value="Generate New QR Code"/>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

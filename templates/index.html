@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Visiting Card QR Code Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+<h1>Visiting Card QR Code Generator</h1>
+  <div class="container">
+    <div id="logbox">
+      <form id="qrgenerator" action = "http://localhost:5000/home" method = "post">
+        <h2>Enter Details</h2>
+        <input class="input pass" name="First-Name" type="text" placeholder="First name" pattern="^[\w]{3,16}$" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Last-Name" type="text" placeholder="Last name" pattern="^[\w]{3,16}$" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Mobile-Number" type="text" placeholder="Mobile number" pattern="[0-9]{10,11}" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Email" type="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Company" type="text" placeholder="Company name" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Designation" type="text" placeholder="Designation" autofocus="autofocus" required="required"/>
+        <input class="input pass" name="Address" type="text" placeholder="address" autofocus="autofocus" required="required"/>
+        <input class="inputButton" type="submit" value="Generate QR Code"/>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
